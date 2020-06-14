@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.sampleapp" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+	<application android:label="SampleApp.Android">
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <activity
+       android:name="com.tencent.tauth.AuthActivity"
+       android:noHistory="true"
+       android:launchMode="singleTask" >
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="tencent1110576152" />
+      </intent-filter>
+    </activity>
+    <activity
+           android:name="com.tencent.connect.common.AssistActivity"
+           android:configChanges="orientation|keyboardHidden"
+           android:screenOrientation="behind"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <provider
+            android:authorities="com.tencent.sample.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/file_paths"/>
+    </provider>
+  </application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>
