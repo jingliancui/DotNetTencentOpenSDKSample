@@ -1,4 +1,5 @@
-﻿using Com.Tencent.Tauth;
+﻿#if ANDROID
+using Com.Tencent.Tauth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,3 +31,4 @@ namespace SampleApp.TencentStuff
         }
     }
 }
+#endif
