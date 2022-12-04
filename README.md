@@ -1,5 +1,5 @@
 # XamarinFormsTencentOpenSDKSample
-Sample for showing Tencent OpenSDK features on Xamarin.Forms.
+Sample for showing Tencent OpenSDK features on .Net MAUI and Xamarin.Forms.
 
 Tutorial:
 
